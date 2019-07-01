@@ -1,4 +1,3 @@
-<%@page import="java.util.List"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,17 +8,9 @@
 	</head>
 	
 	<body>
-		<h1>Les collaborateurs</h1>
-		<ul>
-		<%
-		List<String> listeNoms =(List<String>)request.getAttribute("listeNoms");
-		for (String nom : listeNoms) {	
-		%>
-			<li><%= nom %></li>
-		<%
-		}
-		%>
-		</ul>
+		<h1>Nouveau collaborateur</h1>
+		
+		
 		
 		<script src="<%=request.getContextPath()%>/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
 	</body>
