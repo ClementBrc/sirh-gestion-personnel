@@ -32,4 +32,18 @@
         </jsp-property-group>
     </jsp-config>
 
+<filter>
+	<filter-name>TimerFilter</filter-name>
+	<filter-class>test.TimerFilter</filter-class>
+</filter>
+
+<filter-mapping>
+	<filter-name>TimerFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<listener>
+<listener-class>test.CompteurSessionListener</listener-class>
+</listener>
+
 </web-app>
