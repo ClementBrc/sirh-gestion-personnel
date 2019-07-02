@@ -8,8 +8,14 @@ import java.io.IOException;
 
 public class EditerCollaborateursController extends HttpServlet {
     @Override
-    public void doGet (HttpServletRequest req, HttpServletResponse rep) throws IOException {
-        String matricule = req.getParameter("matricule");
+    public void doGet (HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+       
+    	req.getRequestDispatcher("/WEB-INF/views/collab/editerCollaborateur.jsp")
+    	.forward(req, resp);
+    }
+    	
+    	/* 
+    	String matricule = req.getParameter("matricule");
 
         rep.setContentType("text/html");
 
@@ -46,4 +52,5 @@ public class EditerCollaborateursController extends HttpServlet {
             );
         }
     }
+    */
 }

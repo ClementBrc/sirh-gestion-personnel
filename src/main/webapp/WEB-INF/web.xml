@@ -15,4 +15,21 @@
 <url-pattern>/collaborateurs/lister</url-pattern>
 </servlet-mapping>
 
+	<servlet>
+<servlet-name>EditerCollaborateursController</servlet-name>
+<servlet-class>dev.sgp.web.EditerCollaborateursController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>EditerCollaborateursController</servlet-name>
+<url-pattern>/collaborateurs/editer</url-pattern>
+</servlet-mapping>
+
+<jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/WEB-INF/lib/taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+
 </web-app>
