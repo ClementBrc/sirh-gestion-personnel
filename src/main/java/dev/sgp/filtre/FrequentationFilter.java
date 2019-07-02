@@ -28,9 +28,20 @@ public class FrequentationFilter implements Filter {
 			String path = ((HttpServletRequest) req).getRequestURI();
 			config.getServletContext().log(path + " : " + (after - before));
 
-			}
-
-			public void destroy() {
+			
+	
+		String chemin = request.getRequestURI().substring( request.getContextPath().length() );
+		if ( chemin.startsWith( "/inc" ) ) {
+        chain.doFilter( request, response );
+        return;
+		}
+		
+        HttpSession session = request.getSession();
+        
+			
+	}
+		
+		public void destroy() {
 				
 			}
-	}
+}
